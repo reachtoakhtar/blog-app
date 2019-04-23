@@ -3,32 +3,16 @@
     <section class="intro">
       <h1>Get the latest news!</h1>
     </section>
-    <section class="featured-posts">
-      <PostPreview
-        id = "1"
-        title = "Post Title"
-        previewText = "Preview Text"
-        thumbnail = "https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg" />
-      <PostPreview
-        id = "2"
-        title = "Post Title 2"
-        previewText = "Preview Text"
-        thumbnail = "https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg" />
-      <PostPreview
-        id = "3"
-        title = "Post Title 3"
-        previewText = "Preview Text"
-        thumbnail = "https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg" />
-    </section>
+    <PostList />
   </div>
 </template>
 
 <script>
-import PostPreview from '@/components/Posts/PostPreview'
+import PostList from '@/components/Posts/PostList'
 
 export default {
   components: {
-    PostPreview
+    PostList
   }
 }
 </script>

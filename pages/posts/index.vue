@@ -1,11 +1,22 @@
 <!-- Created by Akhtar on 22/04/19 -->
 
 <template>
-  <div class="posts-page">Post List</div>
+  <div class="posts-page">
+    <PostList />
+  </div>
 </template>
 
+<script>
+import PostList from '@/components/posts/PostList'
+export default {
+  components: {
+    PostList
+  }
+}
+</script>
+
 <style scoped>
-.posts-page {
+.post-list {
   display: flex;
   justify-content: center;
   align-items: center;
