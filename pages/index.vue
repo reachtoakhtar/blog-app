@@ -4,27 +4,34 @@
       <h1>Get the latest news!</h1>
     </section>
     <section class="featured-posts">
-       <nuxt-link :to="'/posts/' + 1" class="post-preview">
-         <article>
-           <div class="post-thumbnail" style="background-image: url('https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg')"></div>
-           <div class="post-content">
-             <h1>Post Title</h1>
-             <p>Preview Text</p>
-           </div>
-         </article>
-       </nuxt-link>
-       <nuxt-link :to="'/posts/' + 2" class="post-preview">
-         <article>
-           <div class="post-thumbnail" style="background-image: url('https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg')"></div>
-           <div class="post-content">
-             <h1>Post Title</h1>
-             <p>Preview Text</p>
-           </div>
-         </article>
-       </nuxt-link>
+      <PostPreview
+        id = "1"
+        title = "Post Title"
+        previewText = "Preview Text"
+        thumbnail = "https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg" />
+      <PostPreview
+        id = "2"
+        title = "Post Title 2"
+        previewText = "Preview Text"
+        thumbnail = "https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg" />
+      <PostPreview
+        id = "3"
+        title = "Post Title 3"
+        previewText = "Preview Text"
+        thumbnail = "https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg" />
     </section>
   </div>
 </template>
+
+<script>
+import PostPreview from '@/components/Posts/PostPreview'
+
+export default {
+  components: {
+    PostPreview
+  }
+}
+</script>
 
 <style scoped>
 .intro {
@@ -64,41 +71,5 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
-
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: white;
-  width: 90%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
-}
-
-.post-thumbnail {
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-}
-
-.post-content {
-  padding: 10px;
-  text-align: center;
-}
-
-a:hover .post-content,
-a:active .post-content {
-  background-color: #ccc;
 }
 </style>
