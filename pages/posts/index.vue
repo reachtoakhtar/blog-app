@@ -2,7 +2,7 @@
 
 <template>
   <div class="posts-page">
-    <PostList />
+    <PostList isAdmin/>
   </div>
 </template>
 
