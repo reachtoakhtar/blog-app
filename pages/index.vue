@@ -14,61 +14,11 @@ export default {
   components: {
     PostList
   },
-  asyncData(context, callback) {
-    window.setTimeout(() => {
-      callback(null, {
-        loadedPosts: [
-          {
-            id: '1',
-            title: 'First Post',
-            previewText: 'This is our First Post',
-            thumbnail: 'https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg'
-          },
-          {
-            id: '2',
-            title: 'Second Post',
-            previewText: 'This is our Second Post',
-            thumbnail: 'https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg'
-          },
-          {
-            id: '3',
-            title: 'Third Post',
-            previewText: 'This is our Third Post',
-            thumbnail: 'https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg'
-          }
-        ]
-      })
-    }, 1500)
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts
+    }
   }
-//  data() {
-//    return {
-//      loadedPosts: []
-//    }
-//  }
-//  created() {
-//    setTimeout(() => {
-//      this.loadedPosts = [
-//        {
-//          id: '1',
-//          title: 'First Post',
-//          previewText: 'This is our First Post',
-//          thumbnail: 'https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg'
-//        },
-//        {
-//          id: '2',
-//          title: 'Second Post',
-//          previewText: 'This is our Second Post',
-//          thumbnail: 'https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg'
-//        },
-//        {
-//          id: '3',
-//          title: 'Third Post',
-//          previewText: 'This is our Third Post',
-//          thumbnail: 'https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg'
-//        }
-//      ]
-//    }, 1500)
-//  }
 }
 </script>
 
