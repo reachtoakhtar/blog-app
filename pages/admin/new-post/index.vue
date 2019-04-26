@@ -3,18 +3,30 @@
 <template>
   <div class="admin-new-post-page">
     <section class="new-post-form">
-      <AdminPostForm />
+      <AdminPostForm @submit="onSubmitted" />
     </section>
   </div>
 </template>
 
 <script>
 import AdminPostForm from '@/components/Admin/AdminPostForm'
+import http from '@/services/httpService'
 
 export default {
   layout: 'admin',
   components: {
     AdminPostForm
+  },
+  methods: {
+    onSubmitted(postData) {
+      http.post('https://nuxt-blog-mah.firebaseio.com/posts.json', postData)
+        .then((result) => {
+          window.console.log(result)
+        })
+        .catch((error) => {
+          window.console.log(error)
+        })
+    }
   }
 }
 </script>

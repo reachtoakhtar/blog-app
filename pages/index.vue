@@ -3,12 +3,14 @@
     <section class="intro">
       <h1>Get the latest news!</h1>
     </section>
-    <PostList :posts="loadedPosts"/>
+    <PostList :posts="loadedPosts" />
   </div>
 </template>
 
 <script>
 import PostList from '@/components/Posts/PostList'
+// import { createNamespacedHelpers } from 'vuex'
+// const { mapGetters } = createNamespacedHelpers('post')
 
 export default {
   components: {
@@ -16,7 +18,7 @@ export default {
   },
   computed: {
     loadedPosts() {
-      return this.$store.getters.loadedPosts
+      return this.$store.getters['post/loadedPosts']
     }
   }
 }
