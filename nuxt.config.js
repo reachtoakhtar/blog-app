@@ -1,7 +1,7 @@
 import pkg from './package'
 
 export default {
-  mode: 'spa',
+  mode: 'universal',
 
   /*
   ** Headers of the page
@@ -23,6 +23,11 @@ export default {
   ** Customize the progress-bar color
   */
   loading: { color: '#fff' },
+
+  loadingIndicator: {
+    name: 'circle',
+    color: '#fff'
+  },
 
   /*
   ** Global CSS

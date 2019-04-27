@@ -29,7 +29,7 @@ export default {
           id: '1',
           title: 'First Post',
           previewText: 'This is our First Post',
-          thumbnail: 'https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg'
+          thumbnail: ''
         },
         {
           id: '2',
