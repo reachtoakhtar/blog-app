@@ -3,7 +3,8 @@
     <TheHeader @sidenavToggle="displaySideNav = !displaySideNav" />
     <TheSideNav
       :show="displaySideNav"
-      @close="displaySideNav = false" />
+      @close="displaySideNav = false"
+    />
     <nuxt />
   </div>
 </template>

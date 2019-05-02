@@ -7,14 +7,11 @@
 </template>
 
 <script>
-import PostList from '@/components/posts/PostList'
 export default {
-  components: {
-    PostList
-  },
+  middleware: 'log',
   computed: {
     loadedPosts() {
-      return this.$store.getters['post/loadedPosts']
+      return this.$store.getters.loadedPosts
     }
   }
 }

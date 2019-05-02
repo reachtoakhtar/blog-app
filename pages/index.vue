@@ -8,17 +8,10 @@
 </template>
 
 <script>
-import PostList from '@/components/Posts/PostList'
-// import { createNamespacedHelpers } from 'vuex'
-// const { mapGetters } = createNamespacedHelpers('post')
-
 export default {
-  components: {
-    PostList
-  },
   computed: {
     loadedPosts() {
-      return this.$store.getters['post/loadedPosts']
+      return this.$store.getters.loadedPosts
     }
   }
 }

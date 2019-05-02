@@ -22,8 +22,13 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: {
+    // duration: 5000,
+    color: 'red',
+    height: '1px'
+  },
 
+  // For 'spa' mode
   loadingIndicator: {
     name: 'circle',
     color: '#fff'
@@ -33,12 +38,15 @@ export default {
   ** Global CSS
   */
   css: [
+    '~assets/styles/main.css'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~plugins/core-components.js',
+    '~plugins/date-filter.js'
   ],
 
   /*
@@ -76,5 +84,16 @@ export default {
         })
       }
     }
+  },
+  env: {
+    baseUrl: process.env.BASE_URL || 'https://nuxt-blog-mah.firebaseio.com',
+    firebaseAPIKey: 'AIzaSyBpsJn2IkKv4JY6rQZDmwy46tUf8ub-TTo'
   }
+  // transition: {
+  //   name: 'fade',
+  //   mode: 'out-in'
+  // },
+  // router: {
+  //   middleware: 'log'
+  // }
 }

@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     onSubmitted(postData) {
-      this.$store.dispatch('addPost', postData)
+      this.$store.dispatch('addPost', { ...postData, updatedDate: new Date() })
         .then(() => {
           this.$router.push('/admin')
         })
@@ -28,14 +28,14 @@ export default {
 </script>
 
 <style scoped>
-.new-post-form {
-  width: 90%;
-  margin: 20px auto;
-}
-
-@media (min-width: 768px) {
   .new-post-form {
-    width: 500px;
+    width: 90%;
+    margin: 20px auto;
   }
-}
+
+  @media (min-width: 768px) {
+    .new-post-form {
+      width: 500px;
+    }
+  }
 </style>

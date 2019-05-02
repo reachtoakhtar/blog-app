@@ -18,7 +18,7 @@ export default {
     AdminPostForm
   },
   asyncData(context) {
-    return http.get('https://nuxt-blog-mah.firebaseio.com/posts' + context.params.postId + '.json')
+    return http.get(process.env.baseUrl + '/posts/' + context.params.postId + '.json')
       .then((response) => {
         return {
           loadedPost: { ...response.data, id: context.params.postId }
@@ -40,14 +40,14 @@ export default {
 </script>
 
 <style scoped>
-.update-form {
-  width: 90%;
-  margin: 20px auto;
-}
-
-@media (min-width: 768px) {
   .update-form {
-    width: 500px;
+    width: 90%;
+    margin: 20px auto;
   }
-}
+
+  @media (min-width: 768px) {
+    .update-form {
+      width: 500px;
+    }
+  }
 </style>

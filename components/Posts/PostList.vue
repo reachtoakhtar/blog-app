@@ -4,12 +4,13 @@
   <section class="post-list">
     <PostPreview
       v-for="post in posts"
-      :key="post.id"
       :id="post.id"
-      :is-admin="isAdmin"
-      :title="post.title"
+      :key="post.id"
       :thumbnail="post.thumbnail"
-      :previewText="post.previewText"/>
+      :title="post.title"
+      :preview-text="post.previewText"
+      :is-admin="isAdmin"
+    />
   </section>
 </template>
 
